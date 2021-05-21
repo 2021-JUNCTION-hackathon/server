@@ -26,12 +26,7 @@ namespace :deploy do
     on roles(:app) do
       execute "rbenv -v"
     rescue StandardError => e
-        execute ls
-    #   execute 'git clone https://github.com/rbenv/rbenv.git ~/.rbenv'
-    #   execute echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-    #   execute ''
-    #   execute ''
-    #   execute ''
+      execute "cd #{fetch(:application)}/public/server_init/int_rbenv"
     end
   end
 end
