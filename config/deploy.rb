@@ -59,7 +59,7 @@ namespace :deploy do
         
         execute "rbenv -v"
       rescue StandardError => e
-        execute "cd #{fetch(:application)}/config/server_init/int_rbenv.sh"
+        execute "#{fetch(:application)}/shared/config/server_init/int_rbenv.sh"
       end
     end
   end
