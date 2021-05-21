@@ -59,7 +59,9 @@ before :deploy, "deploy:rbenv_init"
 
 namespace :deploy do
   task :rbenv_init do
-    execute "echo 'hi'"
+    on roles(:app) do
+      execute "echo 'hi'"
+    end
   end
   
   namespace :check do
