@@ -28,8 +28,11 @@ namespace :deploy do
       execute "asd"
     end
   end
+  
   task :rescue, :roles => :app, :on_error => :continue do
-    puts 'error'
+    on roles(:app) do
+      puts 'error'
+    end
   end
 end
 
