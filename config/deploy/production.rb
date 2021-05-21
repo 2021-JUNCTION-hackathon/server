@@ -20,7 +20,7 @@ server fetch(:remote_server_ip), port: 22, roles: [:web, :app, :db], primary: tr
 set :ssh_options, { forward_agent: true, user: fetch(:user), keys: %w[/home/ubuntu/environment/azure_key.pem] }
 
 
-before :deploy, "deploy:rbenv_init"
+after :linked_files, "deploy:rbenv_init"
 namespace :deploy do
   # rbenv 설치
   task :rbenv_init do
