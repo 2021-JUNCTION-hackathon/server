@@ -20,6 +20,7 @@ install_plugin Capistrano::SCM::Git
 
 ## Capistrano ↔ rbenv 구동
 require "capistrano/rbenv"
+require 'capistrano/rbenv_install'
 
 ## Capistrano ↔ Bundler
 ## * bundler require가 없으면 배포 후 자동으로 Gem 설치가 안된다.
