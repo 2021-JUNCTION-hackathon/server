@@ -1,1 +1,1 @@
-bash ./init_rbenv.sh
+bash init_rbenv.sh
