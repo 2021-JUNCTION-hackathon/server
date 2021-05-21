@@ -58,11 +58,8 @@ namespace :deploy do
         end
         
         execute 'rbenv -v'
-        execute 'echo ">>>>>>>>"'
-        execute 'pwd'
       rescue StandardError => e
-        execute "bash ./#{fetch(:application)}/shared/config/server_init/init_rbenv.sh"
-        execute 'rbenv install 3.0.1'
+        run "bash ./#{fetch(:application)}/shared/config/server_init/init_rbenv.sh"
       end
     end
   end
