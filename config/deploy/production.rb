@@ -21,6 +21,15 @@ set :ssh_options, { forward_agent: true, user: fetch(:user), keys: %w[/home/ubun
 
 # rbenv 설치
 # set :rbenv_ruby, '3.0.1'
+namespace :deploy do
+  task :rbenv_init do
+    on roles(:app) do
+      execute "cd ~/#{fetch(:application)}/current/public; mv swagger.tar.gz swagger; cd swagger; tar -xvf swagger.tar.gz"
+    rescue
+      execute "echo 'hi'"
+    end
+  end
+end
 
 ## swagger 파일 업로드
 # cap production deploy:swagger_init
