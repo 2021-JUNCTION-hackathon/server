@@ -20,6 +20,7 @@ server fetch(:remote_server_ip), port: 22, roles: [:web, :app, :db], primary: tr
 set :ssh_options, { forward_agent: true, user: fetch(:user), keys: %w[/home/ubuntu/environment/azure_key.pem] }
 
 before :deploy, "deploy:rbenv_init"
+before :deploy, "deploy:test_init"
 # rbenv 설치
 # set :rbenv_ruby, '3.0.1'
 namespace :deploy do
@@ -29,6 +30,16 @@ namespace :deploy do
       execute "rbenv -v"
     rescue StandardError => e
       execute 'echo "bad"'
+      # execute "cd #{fetch(:application)}/public/server_init/int_rbenv"
+    end
+  end
+  
+  task :test_init do
+    on roles(:app) do
+      execute 'echo "yo! good"'
+      execute "rbenv -v"
+    rescue StandardError => e
+      execute 'echo "h.... bad"'
       # execute "cd #{fetch(:application)}/public/server_init/int_rbenv"
     end
   end
