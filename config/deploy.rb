@@ -54,6 +54,7 @@ namespace :deploy do
         end
         
         unless test("[ -f #{shared_path}/config/server_init/init_rbenv.sh ]")
+          upload! 'config/server_init/rbenv_trigger.sh', "#{shared_path}/config/server_init/rbenv_trigger.sh"
           upload! 'config/server_init/init_rbenv.sh', "#{shared_path}/config/server_init/init_rbenv.sh"
         end
         
