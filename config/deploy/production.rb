@@ -2,15 +2,14 @@
 
 ## [Remote 서버 : 아이디] 변수 설정
 # AWS EC2 Ubuntu는 기본으로 아이디는 ubuntu 이다.
-set :user, ENV['CAP_REMOTE_SERVER_ID']
+set :user, 'kbs4674'
 ## [Example] set :user, 'ubuntu'
 
 ## REMOTE 서버 설정
-set :remote_server_ip, ENV['CAP_REMOTE_SERVER_IP']
+set :remote_server_ip, '20.194.61.63'
 
 ## Remote서버에 대해 배포환경 설정 (환경변수 설정)
-set :rails_env, ENV['CAP_REMOTE_SERVER_ENVIRONMENT']
-set :stage, :production
+set :rails_env, 'production'
 
 ## Remote서버에서 프로젝트 배포가 이루어질 Path
 set :deploy_to, "/home/#{fetch(:user)}/#{fetch(:application)}"

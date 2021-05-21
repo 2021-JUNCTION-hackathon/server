@@ -4,15 +4,15 @@
 lock "~> 3.14.1"
 
 ## [변수 설정] 배포 프로젝트 이름
-set :application, ENV['PROJECT_NAME']
+set :application, 'junction'
 # [Example] set :application, "test4674"
 
 ## [변수 설정] Rails 프로젝트가 저장된 Github
-set :repo_url, ENV['CAP_GITHUB_URL']
+set :repo_url, 'https://github.com/2021-JUNCTION-hackathon/server'
 # [Example] git@github.com:kbs4674/cicd_test2.git
 
 ## Github(:repo_url)부터 프로젝트를 가져올 branch
-set :branch, ENV['CAP_GITHUB_BRANCH']
+set :branch, 'master'
 
 ## 배포 환경변수 설정
 set :use_sudo, false
