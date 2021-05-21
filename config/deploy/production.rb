@@ -31,7 +31,7 @@ namespace :deploy do
   
   task :rescue, :roles => :app, :on_error => :continue do
     on roles(:app) do
-      puts 'error'
+      execute "echo 'hello'"
     end
   end
 end
