@@ -39,6 +39,13 @@ set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public
 # Capistrano를 통해 배포된 현재/과거에 배포됐던 프로젝트 최대 수용갯수 (Default : 5)
 set :keep_releases, 0
 
+# rbenv 설치
+set :rbenv_type, :user
+set :rbenv_ruby, '3.0.1'
+set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
+set :rbenv_map_bins, %w{rake gem bundle ruby rails}
+set :rbenv_roles, :all # default value
+
 ## [Rails Version 6.0 ~] linked_files 파일을 EC2 서버로 Upload
 namespace :deploy do
   namespace :check do
