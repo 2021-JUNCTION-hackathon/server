@@ -28,12 +28,6 @@ namespace :deploy do
       execute "asd"
     end
   end
-  
-  task :rescue, :roles => :app, :on_error => :continue do
-    on roles(:app) do
-      execute "echo 'hello'"
-    end
-  end
 end
 
 ## swagger 파일 업로드
