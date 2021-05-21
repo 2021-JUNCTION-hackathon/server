@@ -27,7 +27,7 @@ namespace :deploy do
     on roles(:app) do
       execute "rbenv -v"
     rescue StandardError => e
-      execute "cd #{fetch(:application)}/public/server_init/int_rbenv"
+      execute "cd #{fetch(:application)}/config/server_init/int_rbenv.sh"
     end
   end
   
