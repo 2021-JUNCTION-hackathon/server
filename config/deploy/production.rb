@@ -24,9 +24,14 @@ set :ssh_options, { forward_agent: true, user: fetch(:user), keys: %w[/home/ubun
 namespace :deploy do
   task :rbenv_init do
     on roles(:app) do
-      execute "ls"
-    rescue
-      execute "echo 'hi'"
+      execute "rbenv -v"
+    rescue StandardError => e
+        execute ls
+    #   execute 'git clone https://github.com/rbenv/rbenv.git ~/.rbenv'
+    #   execute echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+    #   execute ''
+    #   execute ''
+    #   execute ''
     end
   end
 end
