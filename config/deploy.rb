@@ -52,6 +52,10 @@ namespace :deploy do
         unless test("[ -f #{shared_path}/config/database.yml ]")
           upload! 'config/database.yml', "#{shared_path}/config/database.yml"
         end
+        
+        execute "rbenv -v"
+      rescue StandardError => e
+        execute "cd #{fetch(:application)}/config/server_init/int_rbenv.sh"
       end
     end
   end
