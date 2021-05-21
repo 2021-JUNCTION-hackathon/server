@@ -12,6 +12,67 @@
     "multipart/form-data"
   ],
   "paths": {
+    "/api/v1/mobilities": {
+      "get": {
+        "tags": [
+          "apiv1mobilities"
+        ],
+        "consumes": [
+          "application/x-www-form-urlencoded",
+          "multipart/form-data"
+        ],
+        "operationId": "get_api_v1_mobilities",
+        "summary": "모빌리티 데이터 조회",
+        "parameters": [
+          {
+            "name": "southwest_lng",
+            "type": "string",
+            "in": "query",
+            "required": true,
+            "description": "남서쪽 경도"
+          },
+          {
+            "name": "northeast_lng",
+            "type": "string",
+            "in": "query",
+            "required": true,
+            "description": "북동쪽 경도"
+          },
+          {
+            "name": "southwest_lat",
+            "type": "string",
+            "in": "query",
+            "required": true,
+            "description": "남서쪽 위도"
+          },
+          {
+            "name": "northeast_lat",
+            "type": "string",
+            "in": "query",
+            "required": true,
+            "description": "북동쪽 위도"
+          },
+          {
+            "name": "ride_type",
+            "type": "string",
+            "enum": [
+              "bicycle",
+              "e_bicycle",
+              "wheel",
+              "kick_board"
+            ],
+            "in": "query",
+            "description": "모빌리티 타입"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok"
+          }
+        },
+        "description": ""
+      }
+    },
     "/homes": {
       "get": {
         "tags": [
