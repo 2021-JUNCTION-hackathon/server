@@ -1,0 +1,88 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "junction (params in:formData)",
+    "description": "\n<p>API Document</p>\n",
+    "version": "1.0",
+    "x-copyright": null
+  },
+  "basePath": "",
+  "consumes": [
+    "application/x-www-form-urlencoded",
+    "multipart/form-data"
+  ],
+  "paths": {
+    "/homes": {
+      "get": {
+        "tags": [
+          "homes"
+        ],
+        "consumes": [
+          "application/x-www-form-urlencoded",
+          "multipart/form-data"
+        ],
+        "operationId": "get_homes",
+        "summary": "(기본) 성공응답",
+        "parameters": [
+
+        ],
+        "responses": {
+          "200": {
+            "description": "ok"
+          }
+        },
+        "description": ""
+      }
+    },
+    "/homes/raise": {
+      "get": {
+        "tags": [
+          "homes"
+        ],
+        "consumes": [
+          "application/x-www-form-urlencoded",
+          "multipart/form-data"
+        ],
+        "operationId": "get_homes_raise",
+        "summary": "(기본) 에러응답",
+        "parameters": [
+
+        ],
+        "responses": {
+          "200": {
+            "description": "ok"
+          }
+        },
+        "description": ""
+      }
+    },
+    "/homes/fail": {
+      "get": {
+        "tags": [
+          "homes"
+        ],
+        "consumes": [
+          "application/x-www-form-urlencoded",
+          "multipart/form-data"
+        ],
+        "operationId": "get_homes_fail",
+        "summary": "(기본) 실패응답",
+        "parameters": [
+
+        ],
+        "responses": {
+          "200": {
+            "description": "ok"
+          }
+        },
+        "description": ""
+      }
+    }
+  },
+  "definitions": {
+  },
+  "tags": [
+
+  ],
+  "host": "52.79.236.64:3000"
+}

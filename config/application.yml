@@ -1,0 +1,28 @@
+PROJECT_NAME: 'junction'
+DB_NAME: 'junction'
+DB_USER_NAME: 'junction'
+DB_USER_PASSWD: '6aaba350a19dc59c6b5b'
+SECRET_KEY_BASE: 'd1c997a2f4579e2c36bbc01a701bf8f614148d3b0b2fcbbb0482bbd3d63f'
+
+# capistrano
+CAP_GITHUB_URL: 'https://github.com/2021-JUNCTION-hackathon/server'
+CAP_GITHUB_BRANCH: 'master'
+CAP_REMOTE_SERVER_ID: 'kbs4674'
+CAP_REMOTE_SERVER_IP: '20.194.61.63'
+
+development:
+  env: 'development'
+    
+    
+test:
+  env: 'test'
+    
+    
+staging:
+  env: 'staging'
+  CAP_REMOTE_SERVER_ENVIRONMENT: 'staging'
+    
+production:
+  env: 'production'
+  CAP_REMOTE_SERVER_ENVIRONMENT: 'production'
+  
