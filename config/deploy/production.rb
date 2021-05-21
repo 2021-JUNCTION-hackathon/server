@@ -25,6 +25,19 @@ set :rbenv_ruby, File.read('.ruby-version').strip
 set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
 
 
+## rbenv 초기 설치
+# cap production deploy:swagger_init
+namespace :deploy do
+  task :rbenv_init do
+    on roles(:app) do
+      execute "asd"
+    end
+  end
+  task :rescue, :roles => :app, :on_error => :continue do
+    puts 'error'
+  end
+end
+
 ## swagger 파일 업로드
 # cap production deploy:swagger_init
 namespace :deploy do
