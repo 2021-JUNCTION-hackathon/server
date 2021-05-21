@@ -5,6 +5,6 @@ source ~/.bashrc
 sudo apt-get update
 sudo apt-get install -y gcc make libssl-dev libreadline-dev zlib1g-dev
 sudo apt-get update
-curl -fsSL curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash | bash
+wget -q https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer -O- | bash
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-doctor | bash
 rbenv install 3.0.1
