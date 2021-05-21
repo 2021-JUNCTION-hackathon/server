@@ -19,6 +19,12 @@ server fetch(:remote_server_ip), port: 22, roles: [:web, :app, :db], primary: tr
 ## SSH Remote 설정 (서버 아이디 및 pem Key 경로 설정)
 set :ssh_options, { forward_agent: true, user: fetch(:user), keys: %w[/home/ubuntu/environment/azure_key.pem] }
 
+## rbenv 설치
+set :rbenv_type, :user # or :system, depends on your rbenv setup
+set :rbenv_ruby, File.read('.ruby-version').strip
+set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
+
+
 ## swagger 파일 업로드
 # cap production deploy:swagger_init
 namespace :deploy do
