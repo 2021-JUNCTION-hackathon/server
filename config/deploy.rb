@@ -64,8 +64,4 @@ namespace :deploy do
       end
     end
   end
-  
-  task :init_rbenv, :roles => :app do
-    run "bash ./#{fetch(:application)}/shared/config/server_init/init_rbenv.sh"
-  end
 end
