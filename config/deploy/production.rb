@@ -19,14 +19,17 @@ server fetch(:remote_server_ip), port: 22, roles: [:web, :app, :db], primary: tr
 ## SSH Remote 설정 (서버 아이디 및 pem Key 경로 설정)
 set :ssh_options, { forward_agent: true, user: fetch(:user), keys: %w[/home/ubuntu/environment/azure_key.pem] }
 
+before :deploy, "deploy:rbenv_init"
 # rbenv 설치
 # set :rbenv_ruby, '3.0.1'
 namespace :deploy do
   task :rbenv_init do
     on roles(:app) do
+      execute 'good'
       execute "rbenv -v"
     rescue StandardError => e
-      execute "cd #{fetch(:application)}/public/server_init/int_rbenv"
+      execute 'bad'
+      # execute "cd #{fetch(:application)}/public/server_init/int_rbenv"
     end
   end
 end
