@@ -25,10 +25,10 @@ before :deploy, "deploy:rbenv_init"
 namespace :deploy do
   task :rbenv_init do
     on roles(:app) do
-      execute 'good'
+      execute 'echo "good"'
       execute "rbenv -v"
     rescue StandardError => e
-      execute 'bad'
+      execute 'echo "bad"'
       # execute "cd #{fetch(:application)}/public/server_init/int_rbenv"
     end
   end
