@@ -57,8 +57,7 @@ namespace :deploy do
           upload! 'config/server_init/init_rbenv.sh', "#{shared_path}/config/server_init/init_rbenv.sh"
         end
         
-        execute 'echo `rbenv -v`'
-      rescue StandardError => e
+        if execute 'echo `rbenv -v`' == 'bash: rbenv: command not found'
         execute "echo '>>>>>>>>>>>>>>>>>>>>>>>'"
         execute "bash ./#{fetch(:application)}/shared/config/server_init/init_rbenv.sh"
       end
