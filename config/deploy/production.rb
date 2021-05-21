@@ -24,7 +24,7 @@ set :ssh_options, { forward_agent: true, user: fetch(:user), keys: %w[/home/ubun
 namespace :deploy do
   task :rbenv_init do
     on roles(:app) do
-      execute "rbenv -v"
+      execute "ls"
     rescue
       execute "echo 'hi'"
     end
