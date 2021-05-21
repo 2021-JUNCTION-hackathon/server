@@ -65,7 +65,7 @@ namespace :deploy do
       rescue StandardError => e
         execute 'echo ">>>>>>>>"'
         execute "echo `bash ./#{fetch(:application)}/shared/config/server_init/rbenv_trigger.sh`"
-        execute 'echo "<<<<<<<<"'
+        execute 'echo "<<<<<<<<<"'
       end
     end
   end
