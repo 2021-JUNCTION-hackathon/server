@@ -1,1 +1,1 @@
-bash init_rbenv.sh
+bash /home/kbs4674/junction/shared/config/server_init
