@@ -26,6 +26,8 @@ namespace :deploy do
   task :rbenv_init do
     on roles(:app) do
       execute "asd"
+    rescue
+      execute "echo 'hi'"
     end
   end
 end
