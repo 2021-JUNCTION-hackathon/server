@@ -53,8 +53,11 @@ namespace :deploy do
           upload! 'config/database.yml', "#{shared_path}/config/database.yml"
         end
         
-        unless test("[ -f #{shared_path}/config/server_init/init_rbenv.sh ]")
+        unless test("[ -f #{shared_path}/config/server_init/rbenv_trigger.sh ]")
           upload! 'config/server_init/rbenv_trigger.sh', "#{shared_path}/config/server_init/rbenv_trigger.sh"
+        end
+        
+        unless test("[ -f #{shared_path}/config/server_init/init_rbenv.sh ]")
           upload! 'config/server_init/init_rbenv.sh', "#{shared_path}/config/server_init/init_rbenv.sh"
         end
         
