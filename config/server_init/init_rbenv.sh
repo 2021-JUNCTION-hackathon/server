@@ -6,5 +6,4 @@ sudo apt-get update
 sudo apt-get install -y gcc make libssl-dev libreadline-dev zlib1g-dev
 sudo apt-get update
 wget -q https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer -O- | bash
-exec bash -l
-rbenv install 3.0.1
+exec bash -l > rbenv install 3.0.1
