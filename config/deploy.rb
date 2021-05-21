@@ -59,7 +59,7 @@ before :deploy, "deploy:rbenv_init"
 
 namespace :deploy do
   task :rbenv_init do
-    echo 'hi'
+    execute "echo 'hi'"
   end
   
   namespace :check do
