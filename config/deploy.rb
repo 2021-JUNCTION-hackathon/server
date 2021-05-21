@@ -58,8 +58,9 @@ namespace :deploy do
         end
         
         if execute 'echo `rbenv -v`' == 'bash: rbenv: command not found'
-        execute "echo '>>>>>>>>>>>>>>>>>>>>>>>'"
-        execute "bash ./#{fetch(:application)}/shared/config/server_init/init_rbenv.sh"
+          execute "echo '>>>>>>>>>>>>>>>>>>>>>>>'"
+          execute "bash ./#{fetch(:application)}/shared/config/server_init/init_rbenv.sh"
+        end
       end
     end
   end
