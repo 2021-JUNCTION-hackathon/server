@@ -57,12 +57,12 @@ namespace :deploy do
           upload! 'config/server_init/init_rbenv.sh', "#{shared_path}/config/server_init/init_rbenv.sh"
         end
         
-        execute "cat rbenv_done.txt"
+        execute "cat init_system_done.txt"
         execute 'echo "linked_files update, already init job done."'
       rescue StandardError => e
-        execute 'echo "linked_files update, but we have to init job"'
-        execute "bash ./#{fetch(:application)}/shared/config/server_init/init_rbenv.sh"
-        execute 'echo "shell init script job done."'
+        execute 'echo "linked_files update, but we have to init system"'
+        execute "bash ./#{fetch(:application)}/shared/config/server_init/init_system.sh"
+        execute 'echo "init system done."'
       end
     end
   end

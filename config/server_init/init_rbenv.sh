@@ -11,7 +11,6 @@ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 source ~/.bash_profile
 rbenv install 3.0.1
 rbenv global 3.0.1
-echo "success! Don't remove this file (for skip this shell script)" >> rbenv_done.txt
 
 ## Postgresql 라이브러리 설치, psql 설정
 sudo apt-get update
@@ -22,3 +21,6 @@ echo "create database junction_production;" | sudo -u postgres psql
 ## (optional) unf_ext Gem 설치 도중 make: g++ 패키지 부재로 인한 에러 해결을 위해 필요
 sudo apt-get update
 sudo apt-get -y install g++
+
+# done
+echo "success! Don't remove this file (for skip this shell script)" >> init_system_done.txt
