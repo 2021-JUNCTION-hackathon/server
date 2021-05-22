@@ -58,7 +58,7 @@ namespace :deploy do
         end
         
         execute 'ready..'
-        execute '`cat ./#{fetch(:application)}/shared/config/server_init/works.text`'
+        execute "`cat ./#{fetch(:application)}/shared/config/server_init/work.text`"
         execute 'good..'
       rescue StandardError => e
         execute 'bad..'
