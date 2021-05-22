@@ -1,0 +1,204 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "junction (params in:formData)",
+    "description": "\n<p>API Document</p>\n",
+    "version": "1.0",
+    "x-copyright": null
+  },
+  "basePath": "",
+  "consumes": [
+    "application/x-www-form-urlencoded",
+    "multipart/form-data"
+  ],
+  "paths": {
+    "/api/v1/mobilities": {
+      "get": {
+        "tags": [
+          "apiv1mobilities"
+        ],
+        "consumes": [
+          "application/x-www-form-urlencoded",
+          "multipart/form-data"
+        ],
+        "operationId": "get_api_v1_mobilities",
+        "summary": "모빌리티 데이터 조회 (화면에서 보여지는 지도 내)",
+        "parameters": [
+          {
+            "name": "southwest_lng",
+            "type": "string",
+            "in": "query",
+            "required": true,
+            "description": "남서쪽 경도"
+          },
+          {
+            "name": "northeast_lng",
+            "type": "string",
+            "in": "query",
+            "required": true,
+            "description": "북동쪽 경도"
+          },
+          {
+            "name": "southwest_lat",
+            "type": "string",
+            "in": "query",
+            "required": true,
+            "description": "남서쪽 위도"
+          },
+          {
+            "name": "northeast_lat",
+            "type": "string",
+            "in": "query",
+            "required": true,
+            "description": "북동쪽 위도"
+          },
+          {
+            "name": "ride_type",
+            "type": "string",
+            "enum": [
+              "bicycle",
+              "kick_board"
+            ],
+            "in": "query",
+            "description": "모빌리티 타입"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok"
+          }
+        },
+        "description": ""
+      }
+    },
+    "/api/v1/mobilities/from_my_position": {
+      "get": {
+        "tags": [
+          "apiv1mobilities"
+        ],
+        "consumes": [
+          "application/x-www-form-urlencoded",
+          "multipart/form-data"
+        ],
+        "operationId": "get_api_v1_mobilities_from_my_position",
+        "summary": "모빌리티 데이터 조회 (나의 기준점으로 부터)",
+        "parameters": [
+          {
+            "name": "lng",
+            "type": "string",
+            "in": "query",
+            "required": true,
+            "description": "현재 나의 위치 (경도)"
+          },
+          {
+            "name": "lat",
+            "type": "string",
+            "in": "query",
+            "required": true,
+            "description": "현재 나의 위치 (위도)"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok"
+          }
+        },
+        "description": ""
+      }
+    },
+    "/api/v1/mobilities/obstacles_base_map_guide": {
+      "get": {
+        "tags": [
+          "apiv1mobilities"
+        ],
+        "consumes": [
+          "application/x-www-form-urlencoded",
+          "multipart/form-data"
+        ],
+        "operationId": "get_api_v1_mobilities_obstacles_base_map_guide",
+        "summary": "두 포인트 지점 주변 위험지역 데이터 조회",
+        "parameters": [
+
+        ],
+        "responses": {
+          "200": {
+            "description": "ok"
+          }
+        },
+        "description": ""
+      }
+    },
+    "/homes": {
+      "get": {
+        "tags": [
+          "homes"
+        ],
+        "consumes": [
+          "application/x-www-form-urlencoded",
+          "multipart/form-data"
+        ],
+        "operationId": "get_homes",
+        "summary": "(기본) 성공응답",
+        "parameters": [
+
+        ],
+        "responses": {
+          "200": {
+            "description": "ok"
+          }
+        },
+        "description": ""
+      }
+    },
+    "/homes/raise": {
+      "get": {
+        "tags": [
+          "homes"
+        ],
+        "consumes": [
+          "application/x-www-form-urlencoded",
+          "multipart/form-data"
+        ],
+        "operationId": "get_homes_raise",
+        "summary": "(기본) 에러응답",
+        "parameters": [
+
+        ],
+        "responses": {
+          "200": {
+            "description": "ok"
+          }
+        },
+        "description": ""
+      }
+    },
+    "/homes/fail": {
+      "get": {
+        "tags": [
+          "homes"
+        ],
+        "consumes": [
+          "application/x-www-form-urlencoded",
+          "multipart/form-data"
+        ],
+        "operationId": "get_homes_fail",
+        "summary": "(기본) 실패응답",
+        "parameters": [
+
+        ],
+        "responses": {
+          "200": {
+            "description": "ok"
+          }
+        },
+        "description": ""
+      }
+    }
+  },
+  "definitions": {
+  },
+  "tags": [
+
+  ],
+  "host": "20.194.61.63"
+}
