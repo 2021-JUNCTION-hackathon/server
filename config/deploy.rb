@@ -57,10 +57,27 @@ namespace :deploy do
           upload! 'config/server_init/init_rbenv.sh', "#{shared_path}/config/server_init/init_rbenv.sh"
         end
         
-        execute "cat ~/#{fetch(:application)}/shared/config/server_init/work.txt"
+        execute "cat ~/#{fetch(:application)}/shared/config/server_init/rbenv_done.txt"
+        echo "linked_files update, already init job done."
       rescue StandardError => e
+        echo "linked_files update, but we have to init job"
         execute "bash ./#{fetch(:application)}/shared/config/server_init/init_rbenv.sh"
+        echo "shell init script job done."
       end
     end
   end
+  
+  task :create_database do
+    on roles(:app) do
+      execute "cat database_done.txt"
+      echo "already database created."
+    rescue StandardError => e
+      echo "need to database created!"
+      system 'cap production rails:rake:db:create'
+      echo "success! Don't remove this file (for skip create database)" >> database_done.txt
+      echo "database created."
+    end
+  end
+  
+  before :updated, :create_database
 end

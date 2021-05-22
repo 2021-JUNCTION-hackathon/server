@@ -1,8 +1,8 @@
 # Load DSL and set up stages
-require "capistrano/setup"
+require 'capistrano/setup'
 
 # Include default deployment tasks
-require "capistrano/deploy"
+require 'capistrano/deploy'
 
 # Load the SCM plugin appropriate to your project:
 #
@@ -12,35 +12,39 @@ require "capistrano/deploy"
 # require "capistrano/scm/svn"
 # install_plugin Capistrano::SCM::Svn
 # or
-require "capistrano/scm/git"
+require 'capistrano/scm/git'
 install_plugin Capistrano::SCM::Git
 
 # Include tasks from other gems included in your Gemfile
 # For documentation on these, see for example:
 
 ## Capistrano ↔ rbenv 구동
-require "capistrano/rbenv"
+require 'capistrano/rbenv'
 # srequire 'capistrano/rbenv_install'
 
 ## Capistrano ↔ Bundler
 ## * bundler require가 없으면 배포 후 자동으로 Gem 설치가 안된다.
-require "capistrano/bundler"
+require 'capistrano/bundler'
 
 ## Capistrano ↔ migrations
 ## * rails/migrations require가 없으면 배포 후 자동으로 DB Migrate가 안된다.
-require "capistrano/rails/migrations"
+require 'capistrano/rails/migrations'
+
+## Capistrano ↔ rake
+## * rails/migrations require가 없으면 배포 후 자동으로 DB Migrate가 안된다.
+require 'capistrano/rails/collection'
 
 ## Capistrano ↔ Bundler
 ## * passenger을 기반으로 웹서버 엔진을 구동한다.
-require "capistrano/passenger"
+require 'capistrano/passenger'
 
 ## Capistrano ↔ figaro
 ## * figaro_yml require가 없으면 application.yml 파일이 Remote 서버에 업로드가 안된다.
-require "capistrano/figaro_yml"
+require 'capistrano/figaro_yml'
 
 ## Capistrano ↔ database
 ## * database_yml require가 없으면 database.yml 파일이 Remote 서버에 업로드가 안된다.
 require 'capistrano/database_yml'
 
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
-Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }
+Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }
