@@ -10,9 +10,11 @@
 # echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 # source ~/.bash_profile
 # rbenv install 3.0.1
-rbenv global 3.0.1
+# rbenv global 3.0.1
 # echo 'success' >> work.txt
 
-sudo apt-get update
-sudo apt-get -y install libpq-dev postgresql postgresql-contrib
+# sudo apt-get update
+# sudo apt-get -y install libpq-dev postgresql postgresql-contrib
 
+# (optional) unf-ext 에러 해결을 위해sudo apt-get update
+sudo apt-get -y install g++
