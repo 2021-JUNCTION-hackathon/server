@@ -29,7 +29,7 @@ namespace :deploy do
     end
   end
   
-  ask :swagger_file_uploaad do
+  task :swagger_file_uploaad do
     on roles(:app) do
       upload! "public/apidocs/production/schema_swagger_form_data.json", "#{shared_path}/public/apidocs/production/schema_swagger_form_data.json"
     end
