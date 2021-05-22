@@ -37,7 +37,7 @@ module Api::V1
       if params[:ride_type]
         plus_alpha = case params[:ride_type]
         when 'bicycle'
-          0.0015
+          0.001
         when 'e_bicycle'
           0.0030
         when 'wheel'
@@ -45,7 +45,7 @@ module Api::V1
         when 'e_wheel'
           0.00010
         when 'kick_board'
-          0.00015
+          0.00005
         when 'e_kick_board'
           0.00040
         end

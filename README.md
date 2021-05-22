@@ -1,26 +1,15 @@
-## Info
-* Rails version : 6.1.3.2
-* Ruby version : 3.0.1
+2021 JUNCTION HACKATHON X Team Sharework
 
-## Ruby / Rails 셋팅
-* Ruby 셋팅(rbenv) : https://kbs4674.tistory.com/187
-* Rails 기본 셋팅 : https://kbs4674.tistory.com/190
+## DEV INFO
+1. Ruby : 3.0.1
+2. Ruby on Rails : 6.1.3.2
 
-## Cloud9 rvm 비활성화
-1. https://gist.github.com/alexcalaca/f3b31718cdd1d24da70d8a13d62bb73f 과정을 따라 진행
-2. 서버 리스타트
-    ```
-    sudo reboot
-    ```
+## Server Dev Tec
+1. Ruby on Rails
+2. [Swagger](https://swagger.io/)
+4. [Capistrano](https://github.com/capistrano/capistrano)
+5. [Rest API Server : Azure](https://azure.microsoft.com/)
 
-## .bashrc 설정 (예시)
-```
-cd junction
-echo 'tt : Open Server'
-echo 'sg : Azure SSH open'
-echo 'apig : RAILS_ENV=production rake api_document:generate'
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias tt="clear; ip; rails s -b 0.0.0.0 -p 3000"
-alias sg="ssh -i '/home/ubuntu/environment/azure_key.pem' kbs4674@20.194.61.63"
-alias apig='RAILS_ENV=production rake api_document:generate'
-```
+## API Document
+1. swagger : http://20.194.49.191/api
+2. apipie : http://20.194.49.191/apipie

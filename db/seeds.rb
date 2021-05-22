@@ -11,3 +11,6 @@
   ride_type = %i[bicycle kick_board].sample
   Mobility.create!(ride_type: ride_type, uid: uid, impulse: rand(1.3..10).round(3), lat: rand(37.478303..37.532917), lng: rand(127.120959..127.141503))
 end
+
+t = Mobility.create!(ride_type: 'kick_board', uid: '93fa8182ee', impulse: rand(1.3..10).round(3), lat: 37.47822262735822, lng: 127.1274432454535)
+ 
