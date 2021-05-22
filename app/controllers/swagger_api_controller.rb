@@ -10,7 +10,7 @@ class SwaggerApiController < ApplicationController
     
     ## production swagger API, Never change this line word
     if Rails.env.production?
-      redirect_to "/swagger/dist/index.html?url=/apidocs/production/schema_swagger_form_data_1621709833.json"
+      redirect_to "/swagger/dist/index.html?url=/apidocs/production/schema_swagger_form_data.json"
     end
   end
   

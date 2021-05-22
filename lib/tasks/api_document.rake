@@ -46,7 +46,7 @@ namespace :api_document do
           idx += 3
           complete_word << '    ## production swagger API, Never change this line word'
           complete_word << '    if Rails.env.production?'
-          complete_word << '      redirect_to "/swagger/dist/index.html?url=/apidocs/production/schema_swagger_form_data_' + "#{time}" + '.json"'
+          complete_word << '      redirect_to "/swagger/dist/index.html?url=/apidocs/production/schema_swagger_form_data.json"'
           complete_word << '    end'
         else
           complete_word << tmp_lines[idx]

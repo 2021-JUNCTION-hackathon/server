@@ -29,6 +29,12 @@ namespace :deploy do
     end
   end
   
+  ask :swagger_file_uploaad do
+    on roles(:app) do
+      upload! "public/apidocs/production/schema_swagger_form_data.json", "#{shared_path}/public/apidocs/production/schema_swagger_form_data.json"
+    end
+  end
+  
   # config/application.yml 파일을 EC2 서버로 Upload
   task :env_file_upload do
     on roles(:app) do
