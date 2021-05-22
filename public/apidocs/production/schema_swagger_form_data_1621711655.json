@@ -84,17 +84,6 @@
         "summary": "모빌리티 데이터 조회 (나의 기준점으로 부터)",
         "parameters": [
           {
-            "name": "ride_type",
-            "type": "string",
-            "enum": [
-              "bicycle",
-              "kick_board"
-            ],
-            "in": "query",
-            "required": true,
-            "description": "사용자가 이동 시 이용하는 모빌리티 타입"
-          },
-          {
             "name": "lng",
             "type": "string",
             "in": "query",
@@ -107,6 +96,16 @@
             "in": "query",
             "required": true,
             "description": "현재 나의 위치 (위도)"
+          },
+          {
+            "name": "ride_type",
+            "type": "string",
+            "enum": [
+              "bicycle",
+              "kick_board"
+            ],
+            "in": "query",
+            "description": "사용자가 이동 시 이용하는 모빌리티 타입"
           }
         ],
         "responses": {
@@ -217,5 +216,5 @@
   "tags": [
 
   ],
-  "host": "15.164.164.165:3000"
+  "host": "20.194.61.63"
 }
