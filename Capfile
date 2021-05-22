@@ -26,10 +26,6 @@ require "capistrano/rbenv"
 ## * bundler require가 없으면 배포 후 자동으로 Gem 설치가 안된다.
 require "capistrano/bundler"
 
-## Capistrano ↔ assets
-## *rails/assets require가 없으면 배포 후 자동으로 assets precompile이 안된다.
-require "capistrano/rails/assets"
-
 ## Capistrano ↔ migrations
 ## * rails/migrations require가 없으면 배포 후 자동으로 DB Migrate가 안된다.
 require "capistrano/rails/migrations"
