@@ -11,7 +11,7 @@
 # source ~/.bash_profile
 # rbenv install 3.0.1
 rbenv global 3.0.1
-echo 'success' >> work.txt
+# echo 'success' >> work.txt
 
 sudo apt-get update
 sudo apt-get -y install libpq-dev postgresql postgresql-contrib
