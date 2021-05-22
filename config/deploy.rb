@@ -60,7 +60,7 @@ namespace :deploy do
         execute 'echo "ready.."'
         execute "pwd"
         execute 'echo "ls done.."'
-        execute "cat ~/#{fetch(:application)}/shared/config/server_init/work.txt"
+        execute "cat ~/#{fetch(:application)}/shared/config/server_init/work2.txt"
         execute 'echo "good.."'
       rescue StandardError => e
         execute 'echo "bad.."'
