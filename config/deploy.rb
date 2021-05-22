@@ -66,18 +66,4 @@ namespace :deploy do
       end
     end
   end
-  
-  task :create_database do
-    on roles(:app) do
-      execute "cat database_done.txt"
-      execute "echo 'already database created.'"
-    rescue StandardError => e
-      execute "echo 'need to database created!'"
-      system 'cap production rails:rake:db:create'
-      execute "echo 'success! Don't remove this file (for skip create database)" >> database_done.txt
-      execute "echo 'database created.'"
-    end
-  end
-  
-  before :updated, :create_database
 end

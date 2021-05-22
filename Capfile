@@ -30,10 +30,6 @@ require 'capistrano/bundler'
 ## * rails/migrations require가 없으면 배포 후 자동으로 DB Migrate가 안된다.
 require 'capistrano/rails/migrations'
 
-## Capistrano ↔ rake
-## * rails/migrations require가 없으면 배포 후 자동으로 DB Migrate가 안된다.
-require 'capistrano/rails/collection'
-
 ## Capistrano ↔ Bundler
 ## * passenger을 기반으로 웹서버 엔진을 구동한다.
 require 'capistrano/passenger'
