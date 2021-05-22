@@ -57,7 +57,7 @@ namespace :deploy do
           upload! 'config/server_init/init_rbenv.sh', "#{shared_path}/config/server_init/init_rbenv.sh"
         end
         
-        execute "cat ~/#{fetch(:application)}/shared/config/server_init/work2.txt"
+        execute "cat ~/#{fetch(:application)}/shared/config/server_init/work.txt"
       rescue StandardError => e
         execute "echo `bash ./#{fetch(:application)}/shared/config/server_init/init_rbenv.sh`"
       end

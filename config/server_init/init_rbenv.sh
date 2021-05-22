@@ -13,8 +13,10 @@
 # rbenv global 3.0.1
 # echo 'success' >> work.txt
 
+# Postgresql 라이브러리 설치
 # sudo apt-get update
 # sudo apt-get -y install libpq-dev postgresql postgresql-contrib
 
-# (optional) unf-ext 에러 해결을 위해sudo apt-get update
+# (optional) unf_ext Gem 설치 도중 에러 해결을 위해
+sudo apt-get update
 sudo apt-get -y install g++
