@@ -29,13 +29,13 @@ module Api::V1
     formats ['query']
     param :lat, String, :desc => '현재 나의 위치 (위도)', meta: ['37.4819'], :required => true
     param :lng, String, :desc => '현재 나의 위치 (경도)', meta: ['127.1240'], :required => true
-    param :ride_type, %w[bicycle kick_board], :desc => "사용자가 이동 시 이용하는 모빌리티 타입", :required => true
+    # param :ride_type, %w[bicycle kick_board], :desc => "사용자가 이동 시 이용하는 모빌리티 타입", :required => true
     def from_my_position
       lat = params[:lat].to_f
       lng = params[:lng].to_f
       plus_alpha = 0.0005
-      plus_alpha = if params[:ride_type]
-        case params[:ride_type]
+      if params[:ride_type]
+        plus_alpha = case params[:ride_type]
         when 'bicycle'
           0.0015
         when 'e_bicycle'
@@ -88,7 +88,6 @@ module Api::V1
         next_lng = lat_and_lng[next_idx][1]
         
         pt_middle_lat, pt_middle_lng = (current_lat+next_lat)/2, (current_lng+next_lng)/2
-        
         range_current_middle_lat = (current_lat - pt_middle_lat).abs
         range_current_middle_lng = (current_lng - pt_middle_lng).abs
         
