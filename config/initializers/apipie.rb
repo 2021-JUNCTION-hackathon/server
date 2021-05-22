@@ -1,5 +1,5 @@
 base_host = if Rails.env.production?
-  "20.194.61.63"
+  "20.194.49.191"
 else
   "#{`dig +short myip.opendns.com @resolver1.opendns.com`.gsub("\n", '')}:3000"
 end
