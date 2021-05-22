@@ -6,7 +6,7 @@ set :user, 'kbs4674'
 ## [Example] set :user, 'ubuntu'
 
 ## REMOTE 서버 설정
-set :remote_server_ip, '20.194.25.205'
+set :remote_server_ip, '52.231.67.91'
 
 ## Remote서버에 대해 배포환경 설정 (환경변수 설정)
 set :rails_env, 'production'

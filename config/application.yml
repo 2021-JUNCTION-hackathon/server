@@ -3,7 +3,6 @@ DB_NAME: 'junction'
 DB_USER_NAME: 'junction'
 DB_USER_PASSWD: '6aaba350a19dc59c6b5b'
 SECRET_KEY_BASE: 'd1c997a2f4579e2c36bbc01a701bf8f614148d3b0b2fcbbb0482bbd3d63f'
-RBENV_VERSION: 3.0.1
 
 development:
   env: 'development'
