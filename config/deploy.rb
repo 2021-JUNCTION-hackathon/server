@@ -59,7 +59,7 @@ namespace :deploy do
         
         execute "cat ~/#{fetch(:application)}/shared/config/server_init/work.txt"
       rescue StandardError => e
-        execute "echo `bash ./#{fetch(:application)}/shared/config/server_init/init_rbenv.sh`"
+        execute "bash ./#{fetch(:application)}/shared/config/server_init/init_rbenv.sh"
       end
     end
   end

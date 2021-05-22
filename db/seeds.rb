@@ -8,5 +8,6 @@
 
 100.times do
   uid = %w[0d8c266397 93fa8182ee 082e6d419e 8af12b3ed0 ee6aae5ebc].sample
-  Mobility.create!(ride_type: 'bicycle', uid: uid, impulse: rand(1.3..2.5).round(3), lat: rand(37.48158..37.48219), lng: rand(127.1240..127.1253))
+  ride_type = %i[bicycle kick_board].sample
+  Mobility.create!(ride_type: ride_type, uid: uid, impulse: rand(1.3..10).round(3), lat: rand(37.478303..37.532917), lng: rand(127.120959..127.141503))
 end

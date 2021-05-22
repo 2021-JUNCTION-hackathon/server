@@ -8,7 +8,12 @@ Rails.application.routes.draw do
   
   namespace :api do
     namespace :v1 do
-      resources :mobilities, only: [:index]
+      resources :mobilities, only: [:index] do
+        collection do
+          get 'from_my_position'
+          get 'obstacles_base_map_guide'
+        end
+      end
     end
     
     namespace :v2 do

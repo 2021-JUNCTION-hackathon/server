@@ -5,7 +5,7 @@ class SwaggerApiController < ApplicationController
   def index
     ## development swagger API, Never change this line word
     if Rails.env.development?
-      redirect_to "/swagger/dist/index.html?url=/apidocs/development/schema_swagger_form_data_1621630324.json"
+      redirect_to "/swagger/dist/index.html?url=/apidocs/development/schema_swagger_form_data_1621688750.json"
     end
     
     ## production swagger API, Never change this line word
