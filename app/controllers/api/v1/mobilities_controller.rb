@@ -72,7 +72,7 @@ module Api::V1
     
     api! '두 포인트 지점 주변 위험지역 데이터 조회'
     formats ['query']
-    param :lat_and_lng, String, :desc => '위도, 경도(2차원 배열 형태로)', meta: [['37.48158', '127.1240'], ['37.48219', '127.1253']], :required => true
+    # param :lat_and_lng, String, :desc => '위도, 경도(2차원 배열 형태로)', meta: [['37.48158', '127.1240'], ['37.48219', '127.1253']], :required => true
     def obstacles_base_map_guide
       mobility_ids = []
       lat_and_lng = JSON.parse(params[:lat_and_lng])

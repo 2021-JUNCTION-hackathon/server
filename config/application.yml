@@ -17,4 +17,5 @@ staging:
     
 production:
   env: 'production'
+  DB_HOST: '20.194.49.191'
   
