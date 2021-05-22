@@ -19,8 +19,8 @@ server fetch(:remote_server_ip), port: 22, roles: [:web, :app, :db], primary: tr
 ## SSH Remote 설정 (서버 아이디 및 pem Key 경로 설정)
 set :ssh_options, { forward_agent: true, user: fetch(:user), keys: %w[/home/ubuntu/environment/azure_key.pem] }
 
-# set :rbenv_custom_path, "/home/#{fetch(:user)}/.rbenv/"
-# set :rbenv_ruby, '3.0.1'
+## Ruby 버전 설정
+set :rbenv_ruby, '3.0.1'
 
 
 namespace :deploy do
