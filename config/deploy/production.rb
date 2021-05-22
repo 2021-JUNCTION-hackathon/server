@@ -24,7 +24,8 @@ namespace :deploy do
   # swagger 파일 업로드
   task :swagger_init do
     on roles(:app) do
-      execute "cd ~/#{fetch(:application)}/current/public; mv swagger.tar.gz swagger; cd swagger; tar -xvf swagger.tar.gz"
+      upload! "public/swagger.tar.gz", "#{shared_path}/publiic/swagger/swagger.tar.gz"
+      execute "cd ~/#{fetch(:application)}/current/public/swagger; tar -xvf swagger.tar.gz"
     end
   end
   

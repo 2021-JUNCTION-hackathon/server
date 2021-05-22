@@ -34,7 +34,7 @@ set :linked_files, %w{config/application.yml config/database.yml}
 
 ## 프로젝트 배포 후 유지에 있어 공통으로 쓰이는 폴더들
 # Capistrano에 배포된 프로젝트는 현재 상용서비스로 사용되는 프로젝트와 과거에 배포되었던 프로젝트 총 :keep_releases개 로 나뉘어 관리가 이루어진다.
-set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads public/img public/swagger config/server_init}
+set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads public/img public/swagger public/apidocs/production config/server_init}
 
 # Capistrano를 통해 배포된 현재/과거에 배포됐던 프로젝트 최대 수용갯수 (Default : 5)
 set :keep_releases, 0
