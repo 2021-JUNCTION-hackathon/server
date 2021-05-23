@@ -6,8 +6,8 @@
 
 ## Server Dev Tech
 1. Ruby on Rails
-2. [Swagger](https://swagger.io/) [[code1]](/server/blob/master/lib/tasks/api_document.rake) [[code2]](/server/blob/master/config/routes.rb) [[code3]](/server/blob/master/app/controllers/swagger_api_controller.rb)
-4. [Capistrano (로컬 → Production 서버 배포툴)](https://github.com/capistrano/capistrano) [[code1]](/server/blob/master/config/deploy.rb) [[code2]](/server/blob/master/config/deploy/production.rb) [[code3]](/server/blob/master/config/server_init/init_system.sh)
+2. [Swagger](https://swagger.io/) [[code1]](/lib/tasks/api_document.rake) [[code2]](/config/routes.rb) [[code3]](/app/controllers/swagger_api_controller.rb)
+4. [Capistrano (로컬 → Production 서버 배포툴)](https://github.com/capistrano/capistrano) [[code1]](/config/deploy.rb) [[code2]](/config/deploy/production.rb) [[code3]](/config/server_init/init_system.sh)
 5. [Rest API Server : Azure](https://azure.microsoft.com/)
 
 ## API Document
@@ -15,6 +15,6 @@
 2. apipie : http://20.194.49.191/apipie
 
 ## Server API main code
-1. Controller(API req/res) : [app/controllers/api/v1/mobilities_controller.rb](/server/blob/master/app/controllers/api/v1/mobilities_controller.rb)
-2. Model(DB validation, association, ... define) : [app/models/mobility.rb](/server/blob/master/app/models/mobility.rb)
-3. Serializer(JSON response) : [app/serializers/mobility_serializer.rb](/server/blob/master/app/serializers/mobility_serializer.rb)
+1. Controller(API req/res) : [app/controllers/api/v1/mobilities_controller.rb](/app/controllers/api/v1/mobilities_controller.rb)
+2. Model(DB validation, association, ... define) : [app/models/mobility.rb](/app/models/mobility.rb)
+3. Serializer(JSON response) : [app/serializers/mobility_serializer.rb](/app/serializers/mobility_serializer.rb)
